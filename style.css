@@ -1,0 +1,498 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Bricolage Grotesque', sans-serif;
+
+    
+}
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+    
+    /* overflow-x: hidden; */
+}
+.container{
+    width: 1200px;
+    height: 100%;
+    
+    margin: 0 auto;
+}
+.navbar{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.navlogo img{
+    width: 100px;
+    height: 100px;
+}
+.logotext{
+    margin: -1.2rem;
+}
+.navlogo {
+
+    display: flex;
+    justify-content: baseline;
+   align-items: center;
+   padding: 0px;
+
+
+}
+
+.navitems a{
+    text-decoration: none;
+    
+}
+
+.navitems{
+    display: flex;
+    gap: 2rem;
+    padding: 0 4rem;
+    font-weight: 500;
+    
+}
+
+.navitems a{
+    cursor: pointer;
+    color: black;
+    
+    
+}
+
+.navitems a:hover{
+    font-weight: bold;
+    transition: 0.8sec;
+    color: brown;
+}
+
+.hero-section{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    position: relative;
+    justify-content:space-around;
+    align-items: center;
+    gap: 5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+}
+
+.hsleft{
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 2rem;
+}
+
+.hsheading{
+    font-size: 35px;
+    color: #343d68;
+}
+
+.role{
+    color: purple;
+    font-weight: 800;
+}
+.hsdesc{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+.btn-pink {
+    background-color:red;
+    width: fit-content;
+    color: white;
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+    position: relative;
+    z-index: 1;
+  }
+  .btn-pink::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+  }
+  .btn-pink:hover::before {
+    transform: scaleX(1);
+  }
+  .btn-pink:hover {
+    border: solid 3px var(--bgOrange);
+    color: black;
+  }
+
+  .hsright{
+   position: relative;
+   width: 80%;
+   height: 100%;
+   justify-content: center;
+   align-items: center;
+
+   
+  }
+
+  .hsr{
+    position: absolute;
+    align-items: center;
+    align-content: center;
+  }
+
+  .userimage{
+    z-index: -1;
+    padding: 25px;
+    
+    filter: grayscale(1);
+    transition: 2s;
+    animation-name: scaleimage;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  @keyframes scaleimage {
+    0%{
+        scale: 0.7;
+        padding: 30px;
+    
+
+    }
+
+    50%{
+        scale :0.78;
+        filter: grayscale(0);
+        box-shadow: 3px 3px 10px black;
+
+    }
+    100%{
+        scale: 0.7;
+        padding: 30px;
+
+    }
+    
+  }
+
+.dots{
+    z-index: 0;
+    scale: 0.7;
+    top: 337px;
+    left: 290px;
+    animation-name: do;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  @keyframes do {
+    0%{ 
+
+        transform: translateY(0px);
+        
+    
+
+    }
+
+    50%{
+        transform: translateY(-15px);
+        
+
+    }
+    100%{
+        transform: translateY(0px);
+        
+
+    }
+}
+
+.cube{
+    z-index: 0;
+    scale: 0.7;
+    top: 27px;
+    left: 316px;
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  @keyframes rotate {
+    0%{ 
+
+        transform: rotate(0deg)
+        
+    
+
+    }
+
+    50%{
+        transform: rotateY(360deg);
+        
+
+    }
+    100%{
+        transform: translateY(0deg);
+        
+
+    }
+}
+
+.zigzag{
+    z-index: 0;
+    scale: 0.7;
+    top: 40px;
+    left: 30px;
+    animation-name: zig;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes zig {
+    0%{ 
+
+        transform: translateX(10px);
+        
+    
+
+    }
+
+    50%{
+        transform: translateX(-1px);
+        
+
+    }
+    100%{
+        transform: translateX(10px);
+        
+
+    }
+}
+
+.circle{
+    z-index: 0;
+    scale: 0.7;
+    top: 400px;
+    left: 80px;
+    animation-name: sasa;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  @keyframes sasa {
+   0%{
+    left: 5%;
+    bottom: 0;
+   }
+
+    50%{
+        left: 11%;
+        bottom: 10%;
+    
+    }
+    100%{
+        left: 5%;
+        bottom: 0;
+       }
+}
+
+.project-section1 , .project-section2 , .project-section3{
+    width: 100%;
+    height: 100%;
+    background-color: #bec2d1b9;
+
+}
+.cards{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pheading{
+    height: 15%;
+    color: rgb(58, 31, 31);
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 800;
+    text-shadow: 2px 2px 2px rgb(116, 32, 32);
+    border: 3px dotted black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pcontent{
+    height: 70%;
+    width: 65%;
+    scale: 0.9;
+    background-image: url(Project1.png);
+    background-size: contain;
+    margin-left: 16%;
+    gap: 5%;
+    box-shadow: 5px 5px 10px black;
+    transition:all 0.9s;
+    filter: blur(2px)  grayscale(100%);
+    margin-top: 4%;
+}
+
+.pcontent:hover{
+    box-shadow: 0 0 10px black;
+    scale:0.97 ;
+    filter: grayscale(0%)  blur(0px);
+
+}
+
+.pcontent2{
+    height: 70%;
+    width: 65%;
+    scale: 0.9;
+    background-image: url(Project2.png);
+    background-size: contain;
+    margin-left: 16%;
+    gap: 5%;
+    transition:all 0.9s;
+    filter: blur(2px)  grayscale(100%);
+    margin-top: 4%;
+}
+
+.pcontent3{
+    height: 70%;
+    width: 65%;
+    scale: 0.9;
+    background-image: url(Project3.png);
+    background-size: contain;
+    margin-left: 16%;
+    gap: 5%;
+    transition:all 0.9s;
+    filter: blur(2px)  grayscale(100%);
+    margin-top: 4%;
+}
+
+.pcontent2:hover{
+    box-shadow: 0 0 10px black;
+    scale:0.97 ;
+    filter: grayscale(0%)  blur(0px);
+
+}
+.pcontent3:hover{
+    box-shadow: 0 0 10px black;
+    scale:0.97 ;
+    filter: grayscale(0%)  blur(0px);
+}
+
+.skill-section{
+    width: 100%;
+    height: 100%;
+
+}
+
+.skill-container{
+   width: 1200px;
+   height: 100%;
+   display: flex;
+
+}
+
+.ssleft{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 9%;
+    margin-left: 3%;
+
+}
+
+.ssright{
+    width: 60%;
+    height: 100%;
+    margin-top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 10%;
+}
+.img1{
+ width: 25%;
+ height: 20%;
+ margin: 27px;
+ transition: 0.6s;
+}
+
+.img1:hover{
+    scale: 1.1;
+}
+
+#ss1 , #ss2
+{
+   line-height: 2rem;
+}
+
+#ss3{
+    color: #343d68;
+    font-weight: 500;
+}
+
+.contact-container{
+    width: 100%;
+    height: 100%;
+}
+
+.ccontainer{
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+    background-color: #efeded;
+  
+
+}
+
+.inputdet{
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ip1{
+    width: 50%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    width: 35%;
+    
+
+}
+
+#cm , #cm1{
+    margin-left:2.5% ;
+    color: #343d68;
+    font-weight: 500;
+}
+
+.footer{
+    text-align: center;
+    height: 18%;
+}
